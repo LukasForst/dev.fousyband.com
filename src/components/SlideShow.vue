@@ -67,6 +67,12 @@ export default {
   z-index: 0;
 }
 
+@media only screen and (max-width: 600px) {
+  .slides-show-container {
+    visibility: hidden;
+  }
+}
+
 .slider {
   filter: blur(8px);
   transform: scale(1.1);
