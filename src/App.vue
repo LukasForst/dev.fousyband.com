@@ -1,17 +1,21 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <Main/>
+    <Socials/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Main from '@/components/Main.vue'
+import Socials from "@/components/Socials";
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Main, Socials
   }
 }
 </script>
@@ -25,4 +29,11 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+
+@font-face {
+  font-family: "Phorssa";
+  src: local("Phorssa"),
+  url(./fonts/Phorssa.ttf) format("truetype");
+}
+
 </style>
