@@ -61,7 +61,7 @@ export default {
 /* Used, overwrites default */
 /*noinspection CssUnusedSymbol*/
 .md-ripple {
-  background: whitesmoke;
+  background-color: rgba(255, 255, 255, 0.6);
 }
 
 </style>

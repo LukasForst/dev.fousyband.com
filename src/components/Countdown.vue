@@ -3,9 +3,12 @@
     <div id="num-tag">
       <p>#{{ days + 1 }}</p>
     </div>
-    <p id="countdown">
-      {{ days }}d {{ hours }}h {{ minutes }}m {{ seconds }}s
-    </p>
+    <div class="countdown">
+      <div class="counter">{{ days }}d</div>
+      <div class="counter">{{ hours }}h</div>
+      <div class="counter">{{ minutes }}m</div>
+      <div class="counter">{{ seconds }}s</div>
+    </div>
   </div>
 </template>
 
@@ -69,10 +72,22 @@ export default {
   align-items: center;
 }
 
-#countdown {
+.countdown {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding-bottom: 5%;
+}
+
+.counter {
   color: black;
   font-family: Long Cang, serif;
   font-size: 4.4vw;
+  width: 4.4vw;
+}
+
+.countdown .counter:not(:last-child) {
+  margin-right: 2.5rem;
 }
 
 #num-tag {
