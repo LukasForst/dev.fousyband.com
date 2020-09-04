@@ -75,8 +75,9 @@ export default {
 .countdown {
   display: flex;
   width: 100%;
-  justify-content: center;
+  justify-content: space-evenly;
   padding-bottom: 5%;
+  padding-top: 2%;
 }
 
 .counter {
@@ -106,6 +107,15 @@ export default {
 @media only screen and (max-width: 600px) {
   #num-tag {
     visibility: hidden;
+  }
+
+  .countdown {
+    justify-content: center;
+    padding-top: 10%;
+  }
+
+  .counter {
+    font-size: 7vw;
   }
 }
 </style>

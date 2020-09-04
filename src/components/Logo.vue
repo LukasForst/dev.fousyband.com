@@ -16,6 +16,7 @@ export default {
 </script>
 
 <style scoped>
+
 .main-container {
   display: flex;
   justify-content: center;
@@ -39,4 +40,15 @@ export default {
 .logo img {
   max-width: 18vw;
 }
+
+@media only screen and (max-width: 600px) {
+  .name {
+    font-size: 30vw;
+  }
+
+  .logo img {
+    max-width: 40vw;
+  }
+}
+
 </style>
