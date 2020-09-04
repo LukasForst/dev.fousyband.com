@@ -52,7 +52,7 @@ export default {
 <style scoped>
 #countdown {
   color: black;
-  font-family: Roboto, serif;
+  font-family: Pacifico, serif;
   font-size: 4.4vw;
 }
 </style>
