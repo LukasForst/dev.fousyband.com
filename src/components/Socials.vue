@@ -2,8 +2,8 @@
   <div class="socials">
     <md-speed-dial class="md-bottom-right">
       <md-speed-dial-target>
-        <md-icon class="md-morph-initial">
-          <img alt="Fousy Social Open" class="social-open" src="../assets/fousy.png"/>
+        <md-icon class="md-morph-initial md-icon">
+          <img alt="Fousy Social Open" src="../assets/fousy.png"/>
         </md-icon>
         <md-icon class="md-morph-final">
           <p id="fousy-fab">FOUsY</p>
@@ -12,19 +12,19 @@
 
       <md-speed-dial-content>
         <md-button :href="facebook" class="md-fab md-big" target="_blank">
-          <md-icon class="fa fa-facebook"/>
+          <div class="social-icon fa fa-facebook"/>
         </md-button>
 
         <md-button :href="instagram" class="md-fab md-big" target="_blank">
-          <md-icon class="fa fa-instagram"/>
+          <div class="social-icon fa fa-instagram"/>
         </md-button>
 
         <md-button :href="youtube" class="md-fab md-big md-icon-button" target="_blank">
-          <md-icon class="fa fa-youtube"/>
+          <div class="social-icon fa fa-youtube"/>
         </md-button>
 
         <md-button :href="email" class="md-fab md-big md-icon-button">
-          <md-icon class="fa fa-envelope-o"/>
+          <div class="social-icon fa fa-envelope-o"/>
         </md-button>
 
       </md-speed-dial-content>
@@ -62,6 +62,35 @@ export default {
 /*noinspection CssUnusedSymbol*/
 .md-ripple {
   background-color: rgba(255, 255, 255, 0.6);
+}
+
+.md-fab {
+  width: 70px !important;
+  height: 70px !important;
+}
+
+.social-icon {
+  font-size: 30px !important;
+  color: black;
+}
+
+.md-icon {
+  width: 40px !important;
+}
+
+@media only screen and (max-width: 600px) {
+  .md-fab {
+    width: 50px !important;
+    height: 50px !important;
+  }
+
+  .md-icon {
+    width: 30px !important;
+  }
+
+  #fousy-fab {
+    font-size: 15px;
+  }
 }
 
 </style>
