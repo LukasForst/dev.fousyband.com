@@ -51,8 +51,8 @@ export default {
       const seconds = Math.floor(delta % 60);
 
       this.days = days
-      this.hours = this.formatNumber(hours)
-      this.minutes = this.formatNumber(minutes)
+      this.hours = hours
+      this.minutes = minutes
       this.seconds = this.formatNumber(seconds)
 
       setTimeout(() => this.updateTimer(), 1000)
