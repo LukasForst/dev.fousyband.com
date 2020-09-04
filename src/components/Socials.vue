@@ -1,13 +1,12 @@
 <template>
   <div class="socials">
     <md-speed-dial class="md-bottom-right">
-
       <md-speed-dial-target>
         <md-icon class="md-morph-initial">
           <img alt="Fousy Social Open" class="social-open" src="../assets/fousy.png"/>
         </md-icon>
         <md-icon class="md-morph-final">
-          <p class="name">FOUsY</p>
+          <p id="fousy-fab">FOUsY</p>
         </md-icon>
       </md-speed-dial-target>
 
@@ -47,20 +46,22 @@ export default {
 }
 </script>
 
-<style scoped>
-a {
+<!--not scoped-->
+<style>
+.md-speed-dial-content > a {
   color: inherit;
 }
 
-.socials {
-  z-index: 3;
-  background: whitesmoke;
-}
-
-.name {
+#fousy-fab {
   font-size: 17px;
   font-family: Phorssa, serif;
   color: black;
+}
+
+/* Used, overwrites default */
+/*noinspection CssUnusedSymbol*/
+.md-ripple {
+  background: whitesmoke;
 }
 
 </style>
