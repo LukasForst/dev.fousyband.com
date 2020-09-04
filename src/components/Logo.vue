@@ -43,6 +43,7 @@ export default {
 
 @media only screen and (max-width: 600px) {
   .name {
+    margin-top: -10%;
     font-size: 30vw;
   }
 

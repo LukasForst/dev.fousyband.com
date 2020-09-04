@@ -1,34 +1,20 @@
 <template>
   <div class="socials">
-    <md-speed-dial class="md-bottom-right">
-      <md-speed-dial-target>
-        <md-icon class="md-morph-initial md-icon">
-          <img alt="Fousy Social Open" src="../assets/fousy.png"/>
-        </md-icon>
-        <md-icon class="md-morph-final">
-          <p id="fousy-fab">FOUsY</p>
-        </md-icon>
-      </md-speed-dial-target>
+    <md-button :href="facebook" class="social-icon md-fab md-big" target="_blank">
+      <div class="social-icon fa fa-facebook"/>
+    </md-button>
 
-      <md-speed-dial-content>
-        <md-button :href="facebook" class="md-fab md-big" target="_blank">
-          <div class="social-icon fa fa-facebook"/>
-        </md-button>
+    <md-button :href="instagram" class="social-icon md-fab md-big" target="_blank">
+      <div class="social-icon fa fa-instagram"/>
+    </md-button>
 
-        <md-button :href="instagram" class="md-fab md-big" target="_blank">
-          <div class="social-icon fa fa-instagram"/>
-        </md-button>
+    <md-button :href="youtube" class="social-icon md-fab md-big" target="_blank">
+      <div class="social-icon fa fa-youtube"/>
+    </md-button>
 
-        <md-button :href="youtube" class="md-fab md-big md-icon-button" target="_blank">
-          <div class="social-icon fa fa-youtube"/>
-        </md-button>
-
-        <md-button :href="email" class="md-fab md-big md-icon-button">
-          <div class="social-icon fa fa-envelope-o"/>
-        </md-button>
-
-      </md-speed-dial-content>
-    </md-speed-dial>
+    <md-button :href="email" class="social-icon md-fab md-big">
+      <div class="social-icon fa fa-envelope-o"/>
+    </md-button>
   </div>
 </template>
 
@@ -48,20 +34,30 @@ export default {
 
 <!--not scoped-->
 <style>
-.md-speed-dial-content > a {
+.socials > a {
   color: inherit;
-}
-
-#fousy-fab {
-  font-size: 17px;
-  font-family: Phorssa, serif;
-  color: black;
 }
 
 /* Used, overwrites default */
 /*noinspection CssUnusedSymbol*/
-.md-ripple {
-  background-color: rgba(255, 255, 255, 0.6);
+.socials .md-ripple {
+  background-color: rgba(255, 255, 255, 0.3) !important;
+  transition: background-color .2s;
+}
+
+/*noinspection CssUnusedSymbol*/
+.socials .md-ripple:hover {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+}
+
+</style>
+
+<style scoped>
+.socials {
+  display: flex;
+  flex-flow: row;
+  position: absolute;
+  bottom: 5%;
 }
 
 .md-fab {
@@ -72,15 +68,6 @@ export default {
 .social-icon {
   font-size: 30px !important;
   color: black;
-  transition: font-size .2s;
-}
-
-.social-icon:hover {
-  font-size: 40px !important;
-}
-
-.md-icon {
-  width: 40px !important;
 }
 
 @media only screen and (max-width: 600px) {
@@ -89,12 +76,8 @@ export default {
     height: 50px !important;
   }
 
-  .md-icon {
-    width: 30px !important;
-  }
-
-  #fousy-fab {
-    font-size: 15px;
+  .socials {
+    bottom: 1%;
   }
 }
 
