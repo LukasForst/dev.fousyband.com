@@ -23,14 +23,38 @@ export default {
     VueFlux,
     FluxPreloader,
   },
+  methods: {
+    shuffle(array) {
+      let currentIndex = array.length, temporaryValue, randomIndex;
 
-  data: () => ({
-    vfOptions: {
-      autoplay: true
+      // While there remain elements to shuffle...
+      while (0 !== currentIndex) {
+
+        // Pick a remaining element...
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex -= 1;
+
+        // And swap it with the current element.
+        temporaryValue = array[currentIndex];
+        array[currentIndex] = array[randomIndex];
+        array[randomIndex] = temporaryValue;
+      }
+
+      return array;
     },
-    vfImages: ['photos/1.jpg', 'photos/2.jpg', 'photos/3.jpg'],
-    vfTransitions: ['swipe'],
-  }),
+    getData() {
+      return this.shuffle([...Array(18).keys()].map(k => `photos/${k + 1}.jpg`))
+    }
+  },
+  data() {
+    return {
+      vfOptions: {
+        autoplay: true
+      },
+      vfImages: this.getData(),
+      vfTransitions: ['swipe'],
+    }
+  },
 }
 </script>
 
