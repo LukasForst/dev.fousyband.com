@@ -2,7 +2,7 @@
   <div id="app">
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="//fonts.googleapis.com/css?family=Pacifico:300,400,500,700,400italic" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Long Cang:300,400,500,700,400italic" rel="stylesheet">
     <Container/>
   </div>
 </template>

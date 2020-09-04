@@ -25,7 +25,9 @@ export default {
 }
 
 .item {
-  padding: 5vw;
+  margin-top: 1vw;
+  margin-right: 2vw;
+  margin-left: 2vw;
 }
 
 .name {

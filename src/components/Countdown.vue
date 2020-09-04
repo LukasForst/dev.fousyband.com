@@ -1,5 +1,8 @@
 <template>
-  <div>
+  <div class="countdown-container">
+    <div id="num-tag">
+      <p>#{{ days + 1 }}</p>
+    </div>
     <p id="countdown">
       {{ days }}d {{ hours }}h {{ minutes }}m {{ seconds }}s
     </p>
@@ -50,9 +53,35 @@ export default {
 </script>
 
 <style scoped>
+.countdown-container {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
 #countdown {
   color: black;
-  font-family: Pacifico, serif;
+  font-family: Long Cang, serif;
   font-size: 4.4vw;
+}
+
+#num-tag {
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  transform: translateX(-50%) skewY(-20deg);
+}
+
+#num-tag > p {
+  font-family: Phorssa, serif;
+  font-size: 10rem;
+  color: black;
+}
+
+@media only screen and (max-width: 600px) {
+  #num-tag {
+    visibility: hidden;
+  }
 }
 </style>
