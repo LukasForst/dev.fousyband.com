@@ -28,6 +28,14 @@ export default {
     updateTimer() {
       let delta = Math.abs(this.finalReleaseDate - new Date()) / 1000;
 
+      if (delta <= 0) {
+        this.days = 0
+        this.hours = 0
+        this.minutes = 0
+        this.seconds = 0
+        return
+      }
+
       const days = Math.floor(delta / 86400);
       delta -= days * 86400;
 
@@ -43,6 +51,7 @@ export default {
       this.hours = this.formatNumber(hours)
       this.minutes = this.formatNumber(minutes)
       this.seconds = this.formatNumber(seconds)
+
       setTimeout(() => this.updateTimer(), 1000)
     }
   },
