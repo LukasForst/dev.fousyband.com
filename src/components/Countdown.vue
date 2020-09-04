@@ -69,7 +69,7 @@ export default {
 #num-tag {
   position: absolute;
   top: 40%;
-  left: 10%;
+  left: 15%;
   transform: translateX(-50%) skewY(-20deg);
 }
 
