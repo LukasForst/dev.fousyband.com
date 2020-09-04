@@ -20,19 +20,21 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-flow: row;
+  flex-wrap: wrap;
 }
 
 .item {
-  padding: 50px;
+  padding: 5vw;
 }
 
 .name {
-  font-size: 13rem;
+  font-size: 11vw;
   font-family: Phorssa, serif;
   color: black;
 }
 
-.logo img{
-  max-width: 25rem;
+.logo img {
+  max-width: 18vw;
 }
 </style>

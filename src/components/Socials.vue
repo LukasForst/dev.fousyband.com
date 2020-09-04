@@ -1,20 +1,35 @@
 <template>
   <div class="socials">
-    <md-button class="md-fab md-big md-icon-button" :href="facebook" target="_blank">
-      <md-icon class="fa fa-facebook"/>
-    </md-button>
+    <md-speed-dial class="md-bottom-right">
 
-    <md-button class="md-fab md-big md-icon-button" :href="instagram" target="_blank">
-      <md-icon class="fa fa-instagram"/>
-    </md-button>
+      <md-speed-dial-target>
+        <md-icon class="md-morph-initial">
+          <img alt="Fousy Social Open" class="social-open" src="../assets/fousy.png"/>
+        </md-icon>
+        <md-icon class="md-morph-final">
+          <p class="name">FOUsY</p>
+        </md-icon>
+      </md-speed-dial-target>
 
-    <md-button class="md-fab md-big md-icon-button" :href="youtube" target="_blank">
-      <md-icon class="fa fa-youtube"/>
-    </md-button>
+      <md-speed-dial-content>
+        <md-button :href="facebook" class="md-fab md-big" target="_blank">
+          <md-icon class="fa fa-facebook"/>
+        </md-button>
 
-    <md-button class="md-fab md-big md-icon-button" :href="email">
-      <md-icon class="fa fa-envelope-o"/>
-    </md-button>
+        <md-button :href="instagram" class="md-fab md-big" target="_blank">
+          <md-icon class="fa fa-instagram"/>
+        </md-button>
+
+        <md-button :href="youtube" class="md-fab md-big md-icon-button" target="_blank">
+          <md-icon class="fa fa-youtube"/>
+        </md-button>
+
+        <md-button :href="email" class="md-fab md-big md-icon-button">
+          <md-icon class="fa fa-envelope-o"/>
+        </md-button>
+
+      </md-speed-dial-content>
+    </md-speed-dial>
   </div>
 </template>
 
@@ -36,4 +51,16 @@ export default {
 a {
   color: inherit;
 }
+
+.socials {
+  z-index: 3;
+  background: whitesmoke;
+}
+
+.name {
+  font-size: 17px;
+  font-family: Phorssa, serif;
+  color: black;
+}
+
 </style>

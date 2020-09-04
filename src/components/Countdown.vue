@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p id="countdown" class="md-display-4">
+    <p id="countdown">
       {{ days }}d {{ hours }}h {{ minutes }}m {{ seconds }}s
     </p>
   </div>
@@ -52,5 +52,7 @@ export default {
 <style scoped>
 #countdown {
   color: black;
+  font-family: Roboto, serif;
+  font-size: 4.4vw;
 }
 </style>
