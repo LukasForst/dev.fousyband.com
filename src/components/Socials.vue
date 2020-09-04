@@ -72,6 +72,11 @@ export default {
 .social-icon {
   font-size: 30px !important;
   color: black;
+  transition: font-size .2s;
+}
+
+.social-icon:hover {
+  font-size: 40px !important;
 }
 
 .md-icon {
